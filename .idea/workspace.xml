@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b3c1dd9-a0d8-4e44-af69-d99667b70d03" name="Changes" comment="final commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Diagrams/task6.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Diagrams/task6.svg" afterDir="false" />
+    <list default="true" id="5b3c1dd9-a0d8-4e44-af69-d99667b70d03" name="Changes" comment="final commit v2">
       <change beforePath="$PROJECT_DIR$/src/Task6_v2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task6_v2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +145,7 @@
       <workItem from="1703269216324" duration="1829000" />
       <workItem from="1703271226260" duration="13000" />
       <workItem from="1703320444461" duration="2306000" />
-      <workItem from="1703326502427" duration="1531000" />
+      <workItem from="1703326502427" duration="1988000" />
     </task>
     <task id="LOCAL-00001" summary="Project created.">
       <option name="closed" value="true" />
@@ -182,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703174805264</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="final commit v2">
+      <option name="closed" value="true" />
+      <created>1703328243660</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703328243660</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +209,8 @@
     <MESSAGE value="6 tasks finished. A little bit of diagrams added." />
     <MESSAGE value="All tasks finished. Diagrams added." />
     <MESSAGE value="final commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="final commit" />
+    <MESSAGE value="final commit v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="final commit v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

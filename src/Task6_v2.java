@@ -1,3 +1,4 @@
+    import java.lang.reflect.Array;
     import java.lang.reflect.Field;
     import java.util.*;
 
@@ -34,7 +35,17 @@
                 }
                 json = json.substring(0, json.length() - 1) + "]";
                 return json;
-            } else {
+            } else if (object.getClass().isArray()) {
+                int length = Array.getLength(object);
+                String json = "[";
+                for (int i = 0; i < length; i++) {
+                    Object item = Array.get(object, i);
+                    json += toJSON(item) + ", ";
+                }
+                json = json.substring(0, json.length() - 2) + "]";
+                return json;
+            }
+            else {
                 Class<?> tempClass = object.getClass();//Получаем информацию о классе, а конкретно о его полях
                 String json = "{";
                 for (Field field : tempClass.getDeclaredFields()) { //Этот цикл перебирает все поля класса так как getDeclaredFields возвращает массив объектов Field представляющий все поля, даже приватные
@@ -54,6 +65,7 @@
                 static class PersonFamily{
                     private String mother = "Elizabeth";
                     private String father = "Arthur";
+                    int[] numbers = {10, 123, 3214, 123,4, 412};
                 }
             }
             private String name;
