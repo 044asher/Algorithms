@@ -39,20 +39,33 @@
                 String json = "{";
                 for (Field field : tempClass.getDeclaredFields()) { //Этот цикл перебирает все поля класса так как getDeclaredFields возвращает массив объектов Field представляющий все поля, даже приватные
                     Object value = field.get(object); //Получает значение поля из объекта. Метод get извлекает значение поля, даже если оно является приватным
-                    json += "\"" + field.getName() + "\": " + toJSON(value) + ","; //Тут мы добавляем в строку запись в формате ключ-значение, где ставим ключом имя поля, а значение получаем рекурсивно вызывая toJSON для значения поля.
+                    json += "\"" + field.getName() + "\": " + toJSON(value) + ", "; //Тут мы добавляем в строку запись в формате ключ-значение, где ставим ключом имя поля, а значение получаем рекурсивно вызывая toJSON для значения поля.
 
                 }
-                json = json.substring(0, json.length() - 1) + "}";
+                json = json.substring(0, json.length() - 2) + "}";
                 return json;
             }
         }
         public static class Person {
+            static class PersonData {
+                private int passportID = 143154;
+                private String nationality = "Ukrainian";
+
+                static class PersonFamily{
+                    private String mother = "Elizabeth";
+                    private String father = "Arthur";
+                }
+            }
             private String name;
             private int age;
+            private PersonData personData;
+            private PersonData.PersonFamily personFamily;
 
             public Person(String name, int age) {
                 this.name = name;
                 this.age = age;
+                this.personData = new PersonData();
+                this.personFamily = new PersonData.PersonFamily();
             }
         }
         public static void main(String[] args) throws IllegalAccessException {
@@ -77,7 +90,7 @@
 
             Set<String> set = new HashSet<>();
             set.add("Set1"); set.add("Set2"); set.add("Set3");
-            System.out.println("Проверка Set:" + toJSON(set));
+            System.out.println("Проверка Set: " + toJSON(set));
 
             Person person = new Person("John Doe", 30);
             System.out.println(toJSON(person));
